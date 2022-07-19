@@ -1,29 +1,29 @@
+// Tienda Ecommerce de Música//
 
-let nota1 = parseInt (prompt('ingrese la primer nota'))
-let nota2 = parseInt (prompt('ingrese la segunda nota'))
-let nota3 = parseInt (prompt('ingrese la tercer nota'))
+const carrito = [];
+function AgregarAlCarrito(producto){
+    carrito.push(producto);
+    console.log(carrito);
+}
 
-let ListaDeNotas = [nota1,nota2,nota3]
+//Se agregan productos al carrito de compras//
+AgregarAlCarrito({id:1000, nombre: "Puas", precio: 100})
+AgregarAlCarrito({id:1001, nombre: "Cable", precio: 2300})
+AgregarAlCarrito({id:1002, nombre: "Correa", precio: 1650})
+AgregarAlCarrito({id:1003, nombre: "Afinador", precio: 4000})
+AgregarAlCarrito({id:1004, nombre: "Palillos", precio: 2500})
 
-function ContadorDeNotas (ListaDeNotas){
-    let ContadorDeNotas=0;
-    for(let i = 0; i < 3; i++){
-        ContadorDeNotas = ContadorDeNotas + ListaDeNotas[i];
+//Buscar y eliminar un producto del carrito//
+function EliminarProducto(NombreDelProducto){
+    const index = carrito.findIndex ((producto) => producto.nombre === NombreDelProducto);
+
+    if(index !== -1){
+        carrito.slice(index, 1);
     }
-    return ContadorDeNotas;
+    console.log(carrito)
 }
 
-let contador = ContadorDeNotas(ListaDeNotas);
+//Producto a eliminar//
+EliminarProducto("Puas");
 
-function SacarPromedio(contador){
-    let promedio = Math.round(contador/3);
-    return promedio;
-}
-
-let PromedioFinal = SacarPromedio(contador)
-if(PromedioFinal > 6){
-    alert('Tu nota es de ' + PromedioFinal + 'Estás Aprobado')
-} else {
-    alert('Tu nota es de ' + PromedioFinal + 'Estás Desaprobado')
-}
 
