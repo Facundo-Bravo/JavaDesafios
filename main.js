@@ -1,3 +1,15 @@
+//DESAFIO DOM//
+
+const titulo = (document.querySelector ("#titulo") .textContent = "PRUEBA DOM");
+
+console.log (titulo)
+
+
+
+
+
+
+//PRIMERA ENTREGA PROYECTO FINAL//
 // Tienda Ecommerce de Música//
 
 const carrito = [];
@@ -25,5 +37,6 @@ function EliminarProducto(NombreDelProducto){
 
 //Producto a eliminar//
 EliminarProducto("Puas");
+
 
 
