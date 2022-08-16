@@ -62,7 +62,7 @@ productos.forEach((producto) => {
             <td>${producto.precio} </td>
           </tr>`
         })
-        swal.fire({
+        swal({
             icon: 'success',
             title: 'Felicidades, agregaste un producto al carrito',
             showConfirmButton: false,
