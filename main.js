@@ -21,6 +21,7 @@ const productos = [
     {id:1003, nombre: "Afinador", precio: 3587},
 ];
 
+
 let cards = "";
 productos.forEach((producto) =>{
     const idButton = `add-cart${producto.id}`
@@ -39,7 +40,8 @@ productos.forEach((producto) =>{
         </div>
         <!-- Product actions-->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a id= "${idButton}" data-id="${producto.id}" class="btn btn-outline-dark mt-auto" href="#">COMPRAR</a></div>
+            <div class="text-center"><a id= "${idButton}" data-id="${producto.id}" id = "btn-comprar" 
+            class="btn btn-outline-dark mt-auto" href="#">COMPRAR</a></div>
         </div>
     </div>
 </div>`;
@@ -60,8 +62,15 @@ productos.forEach((producto) => {
             <td>${producto.precio} </td>
           </tr>`
         })
+        swal.fire({
+            icon: 'success',
+            title: 'Felicidades, agregaste un producto al carrito',
+            showConfirmButton: false,
+            timer: 3000
+          })
     })
 });
+
 
 
 
