@@ -1,6 +1,8 @@
 [
-    {"id":1000, "nombre": "Puas", "precio": 100},
-    {"id":1001, "nombre": "Cable", "precio": 2300},
-    {"id":1002, "nombre": "Correa", "precio": 1650},
-    {"id":1003, "nombre": "Afinador", "precio": 3587}
+    {"id":1000, "nombre": "Puas", "precio": 100 , "imagen": "./imagenes/Puas.jpeg"},
+    {"id":1001, "nombre": "Cable", "precio": 2300, "imagen": "./imagenes/Cable.jpeg"},
+    {"id":1002, "nombre": "Correa", "precio": 1650, "imagen": "./imagenes/Correa.jpeg"},
+    {"id":1003, "nombre": "Afinador", "precio": 3587, "imagen": "./imagenes/Afinador.jpeg"},
+    {"id":1004, "nombre": "Gibson Les Paul", "precio": 80000, "imagen": "./imagenes/Gibson.jpeg"},
+    {"id":1005, "nombre": "Palillos", "precio": 550,  "imagen": "./imagenes/Palillos.jpeg"}
 ]
